@@ -1,0 +1,10 @@
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>search products</mat-label>
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="value"
+    (ngModelChange)="fetchProducts()"
+  />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

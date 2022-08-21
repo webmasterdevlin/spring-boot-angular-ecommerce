@@ -1,0 +1,23 @@
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center">
+  <mat-card class="example-card" *ngFor="let product of products">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-subtitle>{{
+        product.price | currency: "USD"
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="product.pictureUrl" alt="Photo of a product" />
+    <mat-card-content>
+      <p style="overflow-wrap: break-word">
+        {{ product.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="addToCart(product)">
+        Add to Cart
+      </button>
+      <button mat-button color="primary">Buy Now</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

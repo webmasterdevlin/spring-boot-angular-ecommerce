@@ -1,0 +1,48 @@
+<mat-list role="list" style="margin-bottom: 4rem">
+  <mat-list-item
+    role="listitem"
+    *ngFor="let product of products; let i = index"
+  >
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+      "
+    >
+      <div style="padding-left: 1rem">
+        <button
+          mat-raised-button
+          color="default"
+          (click)="removeProduct(product, i)"
+        >
+          Remove
+        </button>
+      </div>
+      <div>{{ product.name }}</div>
+      <div>{{ product.price | currency: "USD" }}</div>
+    </div>
+  </mat-list-item>
+</mat-list>
+<button
+  *ngIf="products.length > 0"
+  mat-raised-button
+  color="accent"
+  (click)="emptyChart()"
+>
+  Empty Chart
+</button>
+<div
+  style="width: 100%; display: flex; flex-direction: column; align-items: end"
+>
+  <h2>Cart's Subtotal: {{ subtotal | currency: "USD" }}</h2>
+  <button
+    [disabled]="products.length == 0"
+    mat-raised-button
+    color="primary"
+    (click)="info()"
+  >
+    Checkout
+  </button>
+</div>
