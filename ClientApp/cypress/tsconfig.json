@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types":["cypress"],
+    "isolatedModules": false,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./**/*.ts",
+  ],
+  "exclude": []
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone X",
+    "description": "a good product",
+    "price": 10,
+    "pictureUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-model-unselect-gallery-2-202207_GEO_EMEA"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 12",
+    "description": "a better product",
+    "price": 20,
+    "pictureUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-model-unselect-gallery-2-202207_GEO_EMEA"
+  }
+]

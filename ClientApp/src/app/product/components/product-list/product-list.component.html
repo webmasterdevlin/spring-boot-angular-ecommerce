@@ -1,5 +1,9 @@
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center">
-  <mat-card class="example-card" *ngFor="let product of products">
+  <mat-card
+    data-cy="card"
+    class="example-card"
+    *ngFor="let product of products"
+  >
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ product.name }}</mat-card-title>
@@ -14,7 +18,12 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="addToCart(product)">
+      <button
+        data-cy="add-to-cart-button"
+        mat-raised-button
+        color="primary"
+        (click)="addToCart(product)"
+      >
         Add to Cart
       </button>
       <button mat-button color="primary">Buy Now</button>
